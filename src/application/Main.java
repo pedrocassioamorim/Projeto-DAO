@@ -19,6 +19,7 @@ public class Main {
 
         System.out.println("================");
         System.out.println(seller);
+        System.out.println();
         System.out.println("=================");
         System.out.println("====  TEST 2 - Seller findByDepartment  ======");
         Department department = new Department(2,null);
@@ -26,11 +27,20 @@ public class Main {
         for (Seller pessoa : list){
             System.out.println(pessoa);
         }
+        System.out.println();
         System.out.println("====  TEST 3 - Seller findAll  ======");
         list = sellerDAO.findAll();
         for (Seller pessoa : list){
             System.out.println(pessoa);
         }
+
+        System.out.println();
+        System.out.println("====  TEST 4 - Seller findAll  ======");
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
+
+        sellerDAO.insert(newSeller);
+
+        System.out.println("Inserted new iD = " + newSeller.getId());
 
 
     }
