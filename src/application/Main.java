@@ -26,6 +26,11 @@ public class Main {
         for (Seller pessoa : list){
             System.out.println(pessoa);
         }
+        System.out.println("====  TEST 3 - Seller findAll  ======");
+        list = sellerDAO.findAll();
+        for (Seller pessoa : list){
+            System.out.println(pessoa);
+        }
 
 
     }
